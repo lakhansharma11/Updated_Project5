@@ -1,8 +1,9 @@
 
 pipeline {
     agent any
-    environment {
-        PATH = "/opt/apache-maven-3.6.3/bin:$PATH"
+     tools {
+        // Install the Maven version configured as "M3" and add it to the path.
+        maven "M3"
     }
     stages {
         stage("clone code"){
